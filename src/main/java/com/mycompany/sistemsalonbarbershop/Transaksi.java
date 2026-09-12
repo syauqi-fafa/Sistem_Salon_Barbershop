@@ -20,8 +20,31 @@ public class Transaksi {
         this.karyawan = karyawan;
         this.layanan = layanan;
     }
+   
+    public Pelanggan getPelanggan() {
+        return pelanggan;
+    }
     
-    //Method
+    public void setPelanggan(Pelanggan pelanggan) {
+        this.pelanggan = pelanggan;
+    }
+    
+    public Karyawan getKaryawan() {
+        return karyawan;
+    }
+    
+    public void setKaryawan(Karyawan karyawan) {
+        this.karyawan = karyawan;
+    }
+    
+    public Layanan getlayanan() {
+        return layanan;
+    }
+    
+    public void setLayanan(Layanan layanan) {
+        this.layanan = layanan;
+    }
+    
     public double hitungTotal() {
         return layanan.getHarga();
     }

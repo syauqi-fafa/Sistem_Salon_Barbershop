@@ -15,23 +15,38 @@ public class Layanan {
     private int durasiMenit;
     
     //Constructor
+    public Layanan() {
+    }
+    
     public Layanan(String namaLayanan, double harga, int durasiMenit) {
         this.namaLayanan = namaLayanan;
         this.harga = harga;
         this.durasiMenit = durasiMenit;
     }
     
-    //Method
+    
     public String getNamaLayanan() {
         return namaLayanan;
+    }
+    
+    public void setNamaLayanan(String namaLayanan) {
+        this.namaLayanan = namaLayanan;
     }
     
     public double getHarga() {
         return harga;
     }
     
+    public void setHarga(double harga) {
+        this.harga = harga;
+    }
+    
     public int getDurasiMenit() {
         return durasiMenit;
+    }
+    
+    public void setDurasiMenit(int durasiMenit) {
+        this.durasiMenit = durasiMenit;
     }
     
     public void tampilkanInfo() {

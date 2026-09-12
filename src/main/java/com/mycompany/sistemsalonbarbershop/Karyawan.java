@@ -19,15 +19,25 @@ public class Karyawan {
         this.spesialisasi = spesialisasi;
     }
     
-    //Method
+    //Getter & Setter untuk nama
     public String getNama(){
         return nama;
     }
     
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+    
+    //Getter & Setter untuk spesialisasi
     public String getSpesialisasi(){
         return spesialisasi;
     }
     
+    public void setSpesialisasi(String spesialisasi) {
+        this.spesialisasi = spesialisasi;
+    }
+    
+    //method untuk menampilkan informasi
     public void tampilkanInfo(){
         System.out.println("Kapster: " + nama + " (Spesialisasi: " + spesialisasi + ")");
     }
