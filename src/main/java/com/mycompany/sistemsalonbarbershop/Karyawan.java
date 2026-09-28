@@ -8,37 +8,27 @@ package com.mycompany.sistemsalonbarbershop;
  *
  * @author Lenovo
  */
-public class Karyawan {
-    //Field
-    private String nama;
+public class Karyawan extends Orang {
+    
     private String spesialisasi;
     
-    //Constructor
     public Karyawan(String nama, String spesialisasi){
-        this.nama = nama;
+        super(nama);
         this.spesialisasi = spesialisasi;
     }
     
-    //Getter & Setter untuk nama
-    public String getNama(){
-        return nama;
-    }
-    
-    public void setNama(String nama) {
-        this.nama = nama;
-    }
-    
-    //Getter & Setter untuk spesialisasi
-    public String getSpesialisasi(){
+    public String getSpesialisasi() {
         return spesialisasi;
     }
     
     public void setSpesialisasi(String spesialisasi) {
         this.spesialisasi = spesialisasi;
+
     }
     
-    //method untuk menampilkan informasi
     public void tampilkanInfo(){
-        System.out.println("Kapster: " + nama + " (Spesialisasi: " + spesialisasi + ")");
+        System.out.println("Kapster");
+        super.tampilkanInfo();
+        System.out.println("Spesialisasi : " + spesialisasi);
     }
 }

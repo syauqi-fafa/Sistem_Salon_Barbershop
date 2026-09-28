@@ -37,7 +37,7 @@ public class Transaksi {
         this.karyawan = karyawan;
     }
     
-    public Layanan getlayanan() {
+    public Layanan getLayanan() {
         return layanan;
     }
     

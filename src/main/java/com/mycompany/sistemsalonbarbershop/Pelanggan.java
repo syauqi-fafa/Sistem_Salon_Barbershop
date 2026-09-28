@@ -8,26 +8,14 @@ package com.mycompany.sistemsalonbarbershop;
  *
  * @author Lenovo
  */
-public class Pelanggan {
-    //Field
-    private String nama;
+public class Pelanggan extends Orang {
     private String noTelepon;
     
-    //Constructor
     public Pelanggan(String nama, String noTelepon) {
-        this.nama = nama;
+        super(nama);
         this.noTelepon = noTelepon;
     }
-    
    
-    public String getNama(){
-        return nama;
-    }
-    
-    public void setNama(String nama) {
-        this.nama =nama;
-    }
-    
     public String getNoTelepon(){
         return noTelepon;
     }
@@ -37,7 +25,9 @@ public class Pelanggan {
     }
     
     public void tampilkanInfo() {
-        System.out.println("Pelanggan: " + nama + " (No. Hp: " + noTelepon + ")");
+        System.out.println("Pelanggan");
+        super.tampilkanInfo();
+        System.out.println("No. Hp : " + noTelepon);
     }
     
 }
