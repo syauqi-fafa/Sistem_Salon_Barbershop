@@ -10,24 +10,22 @@ package com.mycompany.sistemsalonbarbershop;
  */
 public class Pelanggan extends Orang {
     private String noTelepon;
-    
+
     public Pelanggan(String nama, String noTelepon) {
         super(nama);
         this.noTelepon = noTelepon;
     }
-   
-    public String getNoTelepon(){
+
+    public String getNoTelepon() {
         return noTelepon;
     }
-    
+
     public void setNoTelepon(String noTelepon) {
         this.noTelepon = noTelepon;
     }
-    
-    public void tampilkanInfo() {
-        System.out.println("Pelanggan");
-        super.tampilkanInfo();
-        System.out.println("No. Hp : " + noTelepon);
+
+    @Override
+    public String getPeran() {
+        return "Pelanggan";
     }
-    
 }

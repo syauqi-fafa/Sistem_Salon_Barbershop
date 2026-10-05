@@ -8,22 +8,19 @@ package com.mycompany.sistemsalonbarbershop;
  *
  * @author Lenovo
  */
-public class Orang {
+public abstract class Orang {
     protected String nama;
-    
+
     public Orang(String nama) {
         this.nama = nama;
     }
+
     
-    public String getNama() {
-        return nama;
-    }
+    public abstract String getPeran();
+
     
-    public void setNama(String nama) {
-        this.nama = nama;
-    }
-    
-    public void tampilkanInfo() {
-        System.out.println("Nama: " + nama);
+    public void tampilkanIdentitas() {
+        System.out.println("Nama  : " + nama);
+        System.out.println("Peran : " + getPeran());
     }
 }

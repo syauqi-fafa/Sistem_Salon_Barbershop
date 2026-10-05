@@ -11,20 +11,35 @@ package com.mycompany.sistemsalonbarbershop;
 public class SistemSalonBarbershop {
 
     public static void main(String[] args) {
+        
+        Orang[] daftar = new Orang[4];
+        daftar[0] = new Pelanggan("Arvel", "084521367841");
+        daftar[1] = new Karyawan("Jean", "Potong Rambut Pria");
+        daftar[2] = new KaryawanSenior("Hazella", "Perawatan Rambut");
+        daftar[3] = new Manajer("Bu Rina", "Bandar Lampung");
+
+        for (Orang o : daftar) {
+            o.tampilkanIdentitas(); 
+
+            
+            if (o instanceof Pekerja) {
+                Pekerja p = (Pekerja) o;
+                p.lakukanTugas();
+                p.tampilkanJadwal();
+            }
+            System.out.println();
+        }
+
+        
+        Manajer manajer = (Manajer) daftar[3];
+        manajer.beriDiskon("Arvel", 20000);
+        manajer.beriDiskon("Arvel", 70000, "Pelanggan ulang tahun");
+
+        
         Layanan potongRambut = new Layanan("Potong Rambut", 35000, 30);
-        Layanan creambath = new Layanan("Creambath", 45000, 50);
-        
-        Karyawan kapster1 = new Karyawan("Jean", "Potong Rambut Pria");
-        Karyawan kapster2 = new Karyawan("Hazella", "Perawatan Rambut");
-        
-        Pelanggan pelanggan1 = new Pelanggan("Arvel", "084521367841");
-        Pelanggan pelanggan2 = new Pelanggan("Jaesly", "08139531520");
-        
+        Pelanggan pelanggan1 = (Pelanggan) daftar[0];
+        Karyawan kapster1 = (Karyawan) daftar[1];
         Transaksi transaksi1 = new Transaksi(pelanggan1, kapster1, potongRambut);
-        Transaksi transaksi2 = new Transaksi(pelanggan2, kapster2, creambath);
-        
         transaksi1.cetakStruk();
-        System.out.println();
-        transaksi2.cetakStruk();
     }
 }

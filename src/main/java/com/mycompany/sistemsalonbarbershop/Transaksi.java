@@ -50,12 +50,12 @@ public class Transaksi {
     }
     
     public void cetakStruk() {
-        System.out.println("===== STRUK TRANSAKSI =====");
-        pelanggan.tampilkanInfo();
-        karyawan.tampilkanInfo();
-        layanan.tampilkanInfo();
-        System.out.println("Total Bayar: Rp" + hitungTotal());
-        System.out.println("===========================");
-    }
+    System.out.println("===== STRUK TRANSAKSI =====");
+    pelanggan.tampilkanIdentitas();
+    karyawan.tampilkanIdentitas();
+    layanan.tampilkanInfo();
+    System.out.println("Total Bayar: Rp" + hitungTotal());
+    System.out.println("===========================");
+}
     
 }
